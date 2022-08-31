@@ -14,12 +14,15 @@ public class BilanganGenap {
 
         int i = 1;
         int count = 0;
-        do {
+        while (count < jumlah) {
             if (i % 2 == 0) {
-                System.out.println(i);
+                System.out.print(i);
                 count++;
-            }    
+                if (count < jumlah) {
+                    System.out.print(", ");
+                }
+            } 
             i++;
-        } while (count < jumlah);
+        }
     }
 }
