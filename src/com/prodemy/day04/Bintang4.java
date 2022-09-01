@@ -15,7 +15,7 @@ public class Bintang4 {
         //     bintang(n);
         //     cetakBilanganGanjil(n);
         // }
-        cetakFibonacci(n);
+        // cetakFibonacci(n);
     }
 
     private static void bintang(int n) {
@@ -63,4 +63,5 @@ public class Bintang4 {
             System.out.println();
         }
     }
+
 }
