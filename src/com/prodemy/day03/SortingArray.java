@@ -1,5 +1,7 @@
 package com.prodemy.day03;
 
+import java.util.Arrays;
+
 public class SortingArray {
     private static int[] array = new int[] { 9, 9, 34, 2, 8, -3, -90, -80, 11, 26, 7, 0, 20};
 
@@ -21,12 +23,12 @@ public class SortingArray {
                     array[i] = array[i + 1];
                     array[i + 1] = tmp;
                     swapped = true;
+                    // System.out.println(Arrays.toString(array));
+
                 }
             }
         }
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
+        System.out.println(Arrays.toString(array));
     }
 
     private static void descSort() {
@@ -43,8 +45,6 @@ public class SortingArray {
                 }
             }
         }
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
+        System.out.println(Arrays.toString(array));
     }
 }
