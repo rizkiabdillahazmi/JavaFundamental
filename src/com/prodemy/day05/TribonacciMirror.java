@@ -1,31 +1,30 @@
-package com.prodemy.day04;
+package com.prodemy.day05;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.prodemy.util.StringUtil;
 
-public class Tribonacci {
+public class TribonacciMirror {
     public static void main(String[] args) {
-        System.out.print("Masukkan bilangan : ");
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        cetakTribonacciMirror(n);
-    }
-
-    private static void cetakTribonacci(int n) {
-        int[] bilangan = new int[n];
-        for (int i = 0; i < n; i++) {
-            int tribonacci = (i < 3) ? 1 : bilangan[i - 1] + bilangan[i - 2] + bilangan[i - 3];
-            bilangan[i] = tribonacci;
-        }
-
-        for (int baris = 1; baris <= n ; baris++) {
-            for (int kolom = 1; kolom <= n; kolom++) {
-                String cetak = (baris == (n+1)/2) ? String.valueOf(bilangan[kolom-1]) : (kolom == (n+1)/2) ? String.valueOf(bilangan[baris-1]) : " ";
-                System.out.print(StringUtil.pad(cetak, 3));
+        
+        boolean ulang = true;
+        while (ulang) {
+            try {
+                Scanner sc = new Scanner(System.in);
+                System.out.print("Masukkan bilangan : ");
+                int n = sc.nextInt();
+                cetakTribonacciMirror(n);
+                ulang = false;
+            } catch (Exception e) { // Misal gak tau exception apa maka tulis aja  "Exception"
+                System.err.println(e);
+                System.err.println("Masukan Harus Angka !!");
+                // sc.nextLine();
+            } finally {
+                System.out.println("Tes");
             }
-            System.out.println();
         }
+        
     }
 
     private static void cetakTribonacciMirror(int n) {
