@@ -26,7 +26,7 @@ public class SusunVokal {
             list.add(list.indexOf(huruf), huruf);
         }
         for (char vokal : vokals) {
-            if (huruf == vokal && list.contains(huruf) == false) {
+            if (huruf == vokal && !list.contains(huruf)) {
                 list.add(huruf);
             }
         }
